@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:svemble/screens/AccountSetup/account_setup_screen.dart';
 
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
@@ -10,7 +11,8 @@ class CreateEmailPasswordField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<CreateEmailPasswordField> createState() => _CreateEmailPasswordFieldState();
+  State<CreateEmailPasswordField> createState() =>
+      _CreateEmailPasswordFieldState();
 }
 
 class _CreateEmailPasswordFieldState extends State<CreateEmailPasswordField> {
@@ -74,7 +76,9 @@ class _CreateEmailPasswordFieldState extends State<CreateEmailPasswordField> {
         ),
         DefaultButton(
           text: "Создать",
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, AccountSetupScreen.routeName);
+          },
         ),
       ],
     );

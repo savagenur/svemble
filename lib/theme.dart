@@ -92,7 +92,7 @@ InputDecorationTheme inputDecorationTheme() {
     isDense: false,
     fillColor: kSecondaryColor,
     filled: true,
-    contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(
         15,
