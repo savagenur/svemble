@@ -10,19 +10,15 @@ const kPrimaryGradientLightColor =
     colors: [Colors.transparent, Colors.black87],
   )
 ;
-const kSecondaryColor = Color(0xFF979797);
+const kSecondaryColor = Color.fromARGB(255, 217, 216, 216);
 const kTextColor = Color(0xFF757575);
 
 const kAnimationDuration = Duration(milliseconds: 200);
 
-final headingStyle = TextStyle(
-  fontSize: getPropScreenWidth(20),
-  fontWeight: FontWeight.bold,
-  color: Colors.black,
-);
+final headingStyle = TextStyle(fontSize: getPropScreenWidth(35),fontWeight: FontWeight.bold,color: Colors.black);
 
 final simpleTextStyle =
-    TextStyle(fontSize: getPropScreenWidth(18), color: Colors.black);
+    TextStyle(fontSize: getPropScreenWidth(16),color: Colors.black);
 
 const defaultDuration = Duration(milliseconds: 700);
 

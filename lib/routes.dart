@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:svemble/auth/Login/login_screen.dart';
 import 'package:svemble/screens/Splash/splash_screen.dart';
 import 'package:svemble/screens/Welcome/welcome_screen.dart';
 
@@ -13,6 +14,9 @@ class AppRoute {
       case WelcomeScreen.routeName:
         return PageTransition(
             child: WelcomeScreen(), type: PageTransitionType.fade);
+      case LoginScreen.routeName:
+        return PageTransition(
+            child: LoginScreen(), type: PageTransitionType.fade);
       default:
         return PageTransition(
             child: Container(

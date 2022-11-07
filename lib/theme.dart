@@ -13,13 +13,17 @@ ThemeData theme() {
       textTheme: textTheme(),
       tabBarTheme: const TabBarTheme(labelColor: Colors.black),
       textButtonTheme: textButtonTheme(),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: kPrimaryColor
-        )
-      ),
+      elevatedButtonTheme: elevatedButtonTheme(),
       popupMenuTheme: popupMenuTheme(),
       primaryColor: Colors.black);
+}
+
+ElevatedButtonThemeData elevatedButtonTheme() {
+  return ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+          backgroundColor: kPrimaryColor,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))));
 }
 
 PopupMenuThemeData popupMenuTheme() {
@@ -31,10 +35,13 @@ PopupMenuThemeData popupMenuTheme() {
 TextButtonThemeData textButtonTheme() {
   return TextButtonThemeData(
     style: TextButton.styleFrom(
-      side: const BorderSide(color: kPrimaryColor),
-      foregroundColor: kPrimaryColor
-    ),
-    
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            30,
+          ),
+        ),
+        side: const BorderSide(color: kPrimaryColor),
+        foregroundColor: kPrimaryColor),
   );
 }
 
@@ -60,7 +67,14 @@ TextTheme textTheme() {
   //     headline6: TextStyle(
   //       color: Color(0xFF8B8B8B),
   //     ));
-  return GoogleFonts.lexendDecaTextTheme();
+  return GoogleFonts.lexendDecaTextTheme().copyWith(
+    bodyText1: TextStyle(
+      color: kTextColor,
+    ),
+    bodyText2: TextStyle(
+      color: kTextColor,
+    ),
+  );
 }
 
 InputDecorationTheme inputDecorationTheme() {
