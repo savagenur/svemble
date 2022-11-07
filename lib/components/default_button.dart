@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:svemble/constants.dart';
 
 import '../size_config.dart';
 
@@ -7,9 +8,12 @@ class DefaultButton extends StatelessWidget {
   final String text;
   final VoidCallback onTap;
   final double width;
-  
+
   const DefaultButton({
-    Key? key, required this.text, required this.onTap,  this.width=double.infinity,
+    Key? key,
+    required this.text,
+    required this.onTap,
+    this.width = double.infinity,
   }) : super(key: key);
 
   @override
@@ -20,13 +24,13 @@ class DefaultButton extends StatelessWidget {
         onPressed: onTap,
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: getPropScreenWidth(15)),
-          child:  AutoSizeText(
+          child: AutoSizeText(
             text,
             style: const TextStyle(
-              fontSize: 16,
+              fontSize: kPrimaryFontSize,
               fontWeight: FontWeight.bold,
             ),
-            minFontSize: 14,
+            minFontSize: kDefaultFontSize,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,

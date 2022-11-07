@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:svemble/auth/Login/login_screen.dart';
+import 'package:svemble/auth/SignIn/signin_screen.dart';
 import 'package:svemble/size_config.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -40,12 +40,13 @@ class WelcomeScreen extends StatelessWidget {
             useScrollView: true,
             image: buildImage(images[2]),
             decoration: buildPageDecoration(),
-            
             title: titles[2],
             bodyWidget: Container(),
           ),
         ],
-        controlsMargin: EdgeInsets.only(bottom: getPropScreenWidth(20),),
+        controlsMargin: EdgeInsets.only(
+          bottom: getPropScreenWidth(20),
+        ),
         next: const Text("Далее"),
         overrideDone: ElevatedButton(
           child: const Text(
@@ -54,7 +55,7 @@ class WelcomeScreen extends StatelessWidget {
           onPressed: () {
             Navigator.pushNamed(
               context,
-              LoginScreen.routeName,
+              SignInScreen.routeName,
             );
           },
         ),
@@ -69,10 +70,10 @@ class WelcomeScreen extends StatelessWidget {
 
   PageDecoration buildPageDecoration() {
     return const PageDecoration(
-      contentMargin: EdgeInsets.only(bottom: 20,right: 10,left:10),
-
+        contentMargin: EdgeInsets.only(bottom: 20, right: 10, left: 10),
         imageFlex: 3,
-        titleTextStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.black));
+        titleTextStyle: TextStyle(
+            fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black));
   }
 
   Image buildImage(String text) {

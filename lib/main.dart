@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:svemble/constants.dart';
 import 'package:svemble/routes.dart';
 import 'package:svemble/screens/Splash/splash_screen.dart';
-import 'package:svemble/size_config.dart';
 import 'package:svemble/theme.dart';
 
 void main() {

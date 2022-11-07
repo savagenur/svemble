@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:svemble/auth/Login/components/login_email_password_field.dart';
-import 'package:svemble/auth/Signup/signup_screen.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:svemble/auth/Login/login_screen.dart';
+import 'package:svemble/components/circle_small_btn.dart';
+import 'package:svemble/components/default_button.dart';
+import 'package:svemble/components/text_divider.dart';
+import 'package:svemble/constants.dart';
 import 'package:svemble/size_config.dart';
 
-import '../../../components/circle_small_btn.dart';
-import '../../../components/text_divider.dart';
-import '../../../constants.dart';
-import '../../Signup/components/create_email_password_field.dart';
-import '../../Signup/components/media_icons.dart';
-import '../login_screen.dart';
+import 'create_email_password_field.dart';
+import 'media_icons.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -25,27 +25,15 @@ class Body extends StatelessWidget {
               height: SizeConfig.screenHeight * .05,
             ),
             Text(
-              "Логин",
+              "Создать аккаунт",
               style: h1TextStyle,
             ),
             SizedBox(
               height: getPropScreenWidth(30),
             ),
-            const LoginEmailPasswordField(),
+            const CreateEmailPasswordField(),
             SizedBox(
-              height: getPropScreenWidth(10),
-            ),
-            TextButton(
-                onPressed: () {},
-                child: const Text(
-                  "Забыли пароль?",
-                  style: TextStyle(
-                    fontSize: kDefaultFontSize,
-                    decoration: TextDecoration.underline,
-                  ),
-                )),
-            SizedBox(
-              height: getPropScreenWidth(30),
+              height: getPropScreenWidth(40),
             ),
             const TextDivider(text: "или продолжить с"),
             SizedBox(
@@ -55,14 +43,14 @@ class Body extends StatelessWidget {
             SizedBox(
               height: getPropScreenWidth(40),
             ),
-            const TextDivider(text: "Нет аккаунта?"),
+            const TextDivider(text: "Уже есть аккаунт?"),
             SizedBox(
               height: getPropScreenWidth(10),
             ),
             CircleSmallBtn(
-              text: "Создать Svemble аккаунт",
+              text: "Войти через Svemble аккаунт",
               onTap: () {
-                Navigator.pushReplacementNamed(context, SignUpScreen.routeName);
+                Navigator.pushReplacementNamed(context, LoginScreen.routeName);
               },
             ),
             SizedBox(

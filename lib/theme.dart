@@ -6,17 +6,35 @@ import 'constants.dart';
 
 ThemeData theme() {
   return ThemeData(
-      scaffoldBackgroundColor: Colors.white,
-      // fontFamily: "Muli",
-      appBarTheme: appBarTheme(),
-      inputDecorationTheme: inputDecorationTheme(),
-      textTheme: textTheme(),
-      tabBarTheme: const TabBarTheme(labelColor: Colors.black),
-      textButtonTheme: textButtonTheme(),
-      elevatedButtonTheme: elevatedButtonTheme(),
-      popupMenuTheme: popupMenuTheme(),
-      primaryColor: Colors.black);
+    iconTheme: IconThemeData(color: kPrimaryColor),
+    primarySwatch: black,
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: appBarTheme(),
+    inputDecorationTheme: inputDecorationTheme(),
+    textTheme: textTheme(),
+    tabBarTheme: const TabBarTheme(labelColor: Colors.black),
+    textButtonTheme: textButtonTheme(),
+    elevatedButtonTheme: elevatedButtonTheme(),
+    popupMenuTheme: popupMenuTheme(),
+  );
 }
+
+const MaterialColor black = MaterialColor(
+  _blackPrimaryValue,
+  <int, Color>{
+   50: Color(0xFFE3F2FD),
+      100: Color(0xFFBBDEFB),
+      200: Color(0xFF90CAF9),
+      300: Color(0xFF64B5F6),
+      400: Color(0xFF42A5F5),
+      500: Color(_blackPrimaryValue),
+      600: Color(0xFF1E88E5),
+      700: Color(0xFF1976D2),
+      800: Color(0xFF1565C0),
+      900: Color(0xFF0D47A1),
+  },
+);
+const int _blackPrimaryValue = 0xFF000000;
 
 ElevatedButtonThemeData elevatedButtonTheme() {
   return ElevatedButtonThemeData(
@@ -34,14 +52,14 @@ PopupMenuThemeData popupMenuTheme() {
 
 TextButtonThemeData textButtonTheme() {
   return TextButtonThemeData(
-    style: TextButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(
-            30,
-          ),
-        ),
-        side: const BorderSide(color: kPrimaryColor),
-        foregroundColor: kPrimaryColor),
+    // style: TextButton.styleFrom(
+    //     shape: RoundedRectangleBorder(
+    //       borderRadius: BorderRadius.circular(
+    //         30,
+    //       ),
+    //     ),
+    //     side: const BorderSide(color: kPrimaryColor),
+    //     foregroundColor: kPrimaryColor),
   );
 }
 
@@ -57,21 +75,13 @@ AppBarTheme appBarTheme() {
 }
 
 TextTheme textTheme() {
-  // return const TextTheme(
-  //     bodyText1: TextStyle(
-  //       color: kTextColor,
-  //     ),
-  //     bodyText2: TextStyle(
-  //       color: kTextColor,
-  //     ),
-  //     headline6: TextStyle(
-  //       color: Color(0xFF8B8B8B),
-  //     ));
   return GoogleFonts.lexendDecaTextTheme().copyWith(
-    bodyText1: TextStyle(
+    bodyText1: const TextStyle(
+      fontSize: kTertiaryFontSize,
       color: kTextColor,
     ),
-    bodyText2: TextStyle(
+    bodyText2: const TextStyle(
+      fontSize: kTertiaryFontSize,
       color: kTextColor,
     ),
   );
@@ -79,21 +89,43 @@ TextTheme textTheme() {
 
 InputDecorationTheme inputDecorationTheme() {
   return InputDecorationTheme(
-    contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-    border: outlineInputBorder(),
-    enabledBorder: outlineInputBorder(),
+    isDense: false,
+    fillColor: kSecondaryColor,
+    filled: true,
+    contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(
+        15,
+      ),
+      borderSide: const BorderSide(
+        color: Colors.red,
+      ),
+    ),
+    enabledBorder: enabledBorder(),
     focusedBorder: outlineInputBorder(),
   );
+}
+
+OutlineInputBorder enabledBorder() {
+  return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(
+        15,
+      ),
+    gapPadding: 10,
+
+      borderSide: const BorderSide(
+        color: Colors.transparent,
+      ));
 }
 
 OutlineInputBorder outlineInputBorder() {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(
-      28,
+      15,
     ),
     gapPadding: 10,
     borderSide: const BorderSide(
-      color: kTextColor,
+      color: kPrimaryColor,
     ),
   );
 }

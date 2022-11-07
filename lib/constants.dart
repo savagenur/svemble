@@ -3,22 +3,44 @@ import 'package:svemble/size_config.dart';
 
 const kPrimaryColor = Colors.black;
 const kPrimaryLightColor = Colors.black54;
-const kPrimaryGradientLightColor = 
-  LinearGradient(
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
-    colors: [Colors.transparent, Colors.black87],
-  )
-;
-const kSecondaryColor = Color.fromARGB(255, 217, 216, 216);
+const kPrimaryGradientLightColor = LinearGradient(
+  begin: Alignment.topCenter,
+  end: Alignment.bottomCenter,
+  colors: [Colors.transparent, Colors.black87],
+);
+const kSecondaryColor = Color.fromARGB(255, 244, 244, 244);
+const kBorderColor = Color.fromARGB(255, 217, 216, 216);
 const kTextColor = Color(0xFF757575);
+const kTertiaryTextColor = Color.fromARGB(255, 189, 188, 188);
+
+// Font sizes
+const double kH1FontSize = 35;
+const double kHeaderFontSize = 20;
+const double kPrimaryFontSize = 18;
+const double kDefaultFontSize = 16;
+const double kTertiaryFontSize = 14;
 
 const kAnimationDuration = Duration(milliseconds: 200);
 
-final headingStyle = TextStyle(fontSize: getPropScreenWidth(35),fontWeight: FontWeight.bold,color: Colors.black);
+final h1TextStyle = TextStyle(
+    fontSize: getPropScreenWidth(kH1FontSize),
+    fontWeight: FontWeight.bold,
+    color: Colors.black);
+final headerTextStyle = TextStyle(
+    fontSize: getPropScreenWidth(kHeaderFontSize),
+    fontWeight: FontWeight.bold,
+    color: Colors.black);
 
-final simpleTextStyle =
-    TextStyle(fontSize: getPropScreenWidth(16),color: Colors.black);
+final secondaryTextStyle = TextStyle(
+    fontSize: getPropScreenWidth(kDefaultFontSize), color: Colors.black);
+
+final primaryTextStyle = TextStyle(
+  fontSize: getPropScreenWidth(kPrimaryFontSize),
+  color: kTextColor,
+);
+
+final tertiaryTextStyle = TextStyle(
+    fontSize: getPropScreenWidth(kTertiaryFontSize), color: kTertiaryTextColor);
 
 const defaultDuration = Duration(milliseconds: 700);
 

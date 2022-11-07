@@ -47,7 +47,7 @@ class SplashScreen extends StatelessWidget {
                     Text(
                       "Добро\nпожаловать в 👋",
                       style: TextStyle(
-                        fontSize: getPropScreenWidth(35),
+                        fontSize: getPropScreenWidth(kH1FontSize),
                         color: Colors.white,
                       ),
                     ),
@@ -58,19 +58,18 @@ class SplashScreen extends StatelessWidget {
                       "Svemble",
                       style: TextStyle(
                         height: 1,
-                        fontSize: getPropScreenWidth(70),
+                        fontSize: getPropScreenWidth(kH1FontSize*2),
                         color: Colors.white,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(
                       height: getPropScreenWidth(20),
                     ),
-                    const Text(
+                     Text(
                       "Лучшее приложение века для электронной\nкоммерции для повседневных нужд!",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+                      
+                      style: tertiaryTextStyle,
                     ),
                   ],
                 ),
