@@ -20,8 +20,7 @@ class EnterOptionTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       shape: OutlineInputBorder(
-          borderSide:
-              const BorderSide(color: kBorderColor),
+          borderSide: const BorderSide(color: kBorderColor),
           borderRadius: BorderRadius.circular(getPropScreenWidth(10))),
       leading: SvgPicture.asset(
         "assets/icons/$iconSvg",
@@ -29,7 +28,7 @@ class EnterOptionTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: secondaryTextStyle,
+        style: defaultTextStyle.copyWith(fontWeight: FontWeight.normal),
       ),
       onTap: onTap,
     );

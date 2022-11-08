@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+import 'package:svemble/constants.dart';
+import 'package:svemble/screens/Home/home_screen.dart';
+
+import '../../size_config.dart';
+
+class MainScreen extends StatefulWidget {
+  static const routeName = "/main";
+  const MainScreen({super.key});
+
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  int currentIndex = 0;
+  List<Widget> pages = [
+    const HomeScreen(),
+    Container(),
+    Container(),
+    Container(),
+    Container(),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    // Todo Delete SizeConfig
+    SizeConfig().init(context);
+    List<BottomNavigationBarItem> items = [
+      BottomNavigationBarItem(
+        icon: Icon(
+          currentIndex == 0 ? Icons.home : Icons.home_outlined,
+        ),
+        label: 'Главная',
+      ),
+       BottomNavigationBarItem(
+        icon: Icon(
+         currentIndex == 1 ? Icons.shopping_cart :   Icons.shopping_cart_outlined,
+        ),
+        label: 'Корзина',
+      ),
+       BottomNavigationBarItem(
+        icon: Icon(
+         currentIndex == 2? Icons.done_all :   Icons.done_all_outlined,
+        ),
+        label: 'Заказы',
+      ),
+       BottomNavigationBarItem(
+        icon: Icon(
+          currentIndex == 3 ? Icons.wallet_travel :  Icons.wallet_travel_rounded,
+        ),
+        label: 'Кошелёк',
+      ),
+       BottomNavigationBarItem(
+        icon: Icon(
+        currentIndex == 4 ? Icons.person :    Icons.person_outline_outlined,
+        ),
+        label: 'Профиль',
+      ),
+    ];
+    return Scaffold(
+      body: IndexedStack(
+        index: currentIndex,
+        children: pages,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: kPrimaryColor,
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
+        onTap: (value) {
+          setState(() {
+            currentIndex = value;
+          });
+        },
+        currentIndex: currentIndex,
+        items: items,
+      ),
+    );
+  }
+}

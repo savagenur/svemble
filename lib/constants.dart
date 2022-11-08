@@ -19,6 +19,7 @@ const double kHeaderFontSize = 20;
 const double kPrimaryFontSize = 18;
 const double kDefaultFontSize = 16;
 const double kTertiaryFontSize = 14;
+const double kQuaternaryFontSize = 10;
 
 const kAnimationDuration = Duration(milliseconds: 200);
 
@@ -28,21 +29,28 @@ final h1TextStyle = TextStyle(
     color: Colors.black);
 final headerTextStyle = TextStyle(
     fontSize: getPropScreenWidth(kHeaderFontSize),
+    height: 1,
     fontWeight: FontWeight.bold,
     color: Colors.black);
 
-final secondaryTextStyle = TextStyle(
-    fontSize: getPropScreenWidth(kDefaultFontSize), color: Colors.black);
+final defaultTextStyle = TextStyle(
+  fontSize: getPropScreenWidth(kDefaultFontSize),
+  color: Colors.black,
+  fontWeight: FontWeight.bold,
+);
 
 final primaryTextStyle = TextStyle(
-  fontSize: getPropScreenWidth(kPrimaryFontSize),
-  color: kTextColor,
-);
+    fontSize: getPropScreenWidth(kPrimaryFontSize),
+    color: kPrimaryColor,
+    fontWeight: FontWeight.bold);
 
 final tertiaryTextStyle = TextStyle(
     fontSize: getPropScreenWidth(kTertiaryFontSize), color: kTertiaryTextColor);
 
-const defaultDuration = Duration(milliseconds: 700);
+final quaternaryTextStyle = TextStyle(
+    fontSize: getPropScreenWidth(kQuaternaryFontSize), color: kPrimaryColor);
+
+const defaultDuration = Duration(milliseconds: 300);
 
 // Form error
 final RegExp emailValidatorRegExp =

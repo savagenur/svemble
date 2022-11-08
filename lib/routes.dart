@@ -4,6 +4,8 @@ import 'package:svemble/auth/Login/login_screen.dart';
 import 'package:svemble/auth/SignIn/signin_screen.dart';
 import 'package:svemble/auth/Signup/signup_screen.dart';
 import 'package:svemble/screens/AccountSetup/account_setup_screen.dart';
+import 'package:svemble/screens/Home/home_screen.dart';
+import 'package:svemble/screens/Main/main_screen.dart';
 import 'package:svemble/screens/Splash/splash_screen.dart';
 import 'package:svemble/screens/Welcome/welcome_screen.dart';
 
@@ -40,6 +42,16 @@ class AppRoute {
         return PageTransition(
           child: const AccountSetupScreen(),
           type: PageTransitionType.bottomToTop,
+        );
+      case MainScreen.routeName:
+        return PageTransition(
+          child: const MainScreen(),
+          type: PageTransitionType.fade,
+        );
+      case HomeScreen.routeName:
+        return PageTransition(
+          child: const HomeScreen(),
+          type: PageTransitionType.rightToLeft,
         );
       default:
         return PageTransition(

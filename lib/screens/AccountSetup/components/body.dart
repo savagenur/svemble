@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:svemble/components/default_button.dart';
+import 'package:svemble/screens/Home/home_screen.dart';
+import 'package:svemble/screens/Main/main_screen.dart';
 import 'package:svemble/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -51,7 +53,15 @@ class Body extends StatelessWidget {
             ),
             TextFormField(
               decoration: InputDecoration(
-                hintText: "Полное имя",
+                hintText: "Имя",
+              ),
+            ),
+            SizedBox(
+              height: getPropScreenWidth(20),
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: "Фамилия",
               ),
             ),
             SizedBox(
@@ -111,11 +121,8 @@ class Body extends StatelessWidget {
               height: getPropScreenWidth(20),
             ),
             InkWell(
-              onTap: () {
-                
-              },
+              onTap: () {},
               borderRadius: BorderRadius.circular(getPropScreenWidth(10)),
-
               child: TextFormField(
                 decoration: InputDecoration(
                   enabled: false,
@@ -135,8 +142,14 @@ class Body extends StatelessWidget {
             ),
             DefaultButton(
               text: "Готово",
-              onTap: () {},
-            )
+              onTap: () {
+                Navigator.pushReplacementNamed(context, MainScreen.routeName);
+              },
+            ),
+
+            SizedBox(
+              height: getPropScreenWidth(60),
+            ),
           ],
         ),
       ),
