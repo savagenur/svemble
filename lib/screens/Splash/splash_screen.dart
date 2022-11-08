@@ -5,7 +5,7 @@ import '../../constants.dart';
 import '../../size_config.dart';
 
 class SplashScreen extends StatelessWidget {
-  static const routeName = "/splash";
+  static const routeName = "/";
   const SplashScreen({super.key});
 
   @override

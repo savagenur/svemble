@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/screens/Home/components/product_tile_list.dart';
 import 'package:svemble/screens/Home/components/search_text_field.dart';
+import 'package:svemble/screens/Popular/popular_screen.dart';
+import 'package:svemble/screens/SpecialOffer/special_offer_screen.dart';
 import 'package:svemble/size_config.dart';
 
 import 'categories.dart';
-import 'category_row_items.dart';
+import '../../../components/category_row_items.dart';
 import 'offer_and_more_btn.dart';
-import 'offer_images.dart';
+import '../../../components/offer_images.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -28,8 +30,10 @@ class Body extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: getPropScreenWidth(20)),
               child: OfferAndMoreBtn(
-                title: "Особые Скидки",
-                onTap: () {},
+                title: "Особые Акции",
+                onTap: () {
+                  Navigator.pushNamed(context, SpecialOfferScreen.routeName);
+                },
               ),
             ),
             SizedBox(
@@ -47,7 +51,9 @@ class Body extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: getPropScreenWidth(20)),
               child: OfferAndMoreBtn(
                 title: "Самые Популярные",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, PopularScreen.routeName);
+                },
               ),
             ),
             SizedBox(
@@ -58,7 +64,9 @@ class Body extends StatelessWidget {
               height: getPropScreenWidth(20),
             ),
             const ProductTileList(),
-            SizedBox(height: getPropScreenWidth(50),),
+            SizedBox(
+              height: getPropScreenWidth(50),
+            ),
           ],
         ),
       ),

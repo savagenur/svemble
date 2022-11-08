@@ -32,17 +32,17 @@ final headerTextStyle = TextStyle(
     height: 1,
     fontWeight: FontWeight.bold,
     color: Colors.black);
-
+final primaryTextStyle = TextStyle(
+    fontSize: getPropScreenWidth(kPrimaryFontSize),
+    color: kPrimaryColor,
+    fontWeight: FontWeight.bold);
 final defaultTextStyle = TextStyle(
   fontSize: getPropScreenWidth(kDefaultFontSize),
   color: Colors.black,
   fontWeight: FontWeight.bold,
 );
 
-final primaryTextStyle = TextStyle(
-    fontSize: getPropScreenWidth(kPrimaryFontSize),
-    color: kPrimaryColor,
-    fontWeight: FontWeight.bold);
+
 
 final tertiaryTextStyle = TextStyle(
     fontSize: getPropScreenWidth(kTertiaryFontSize), color: kTertiaryTextColor);

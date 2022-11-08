@@ -17,7 +17,8 @@ class SearchTextField extends StatelessWidget {
           hintText: "Поиск",
           prefixIcon: const Icon(Icons.search),
           suffixIcon: IconButton(
-            onPressed: () {},
+            onPressed: () {
+            },
             icon: const Icon(
               Icons.filter_alt_outlined,
               color: kPrimaryColor,

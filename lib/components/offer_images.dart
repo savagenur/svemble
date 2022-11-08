@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
-import '../../../size_config.dart';
-import 'dot.dart';
+import '../constants.dart';
+import '../size_config.dart';
+import '../screens/Home/components/dot.dart';
 
 class OfferImages extends StatefulWidget {
   const OfferImages({
@@ -26,6 +26,7 @@ class _OfferImagesState extends State<OfferImages> {
     "assets/images/girl2.png",
     "assets/images/girl3.png",
   ];
+ 
   @override
   Widget build(BuildContext context) {
     return Stack(
