@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:svemble/data/ratings.dart';
 
-import '../constants.dart';
-import '../data/categories.dart';
-import '../size_config.dart';
+import '../../../constants.dart';
+import '../../../data/categories.dart';
+import '../../../size_config.dart';
 
-class CategoryRowItems extends StatefulWidget {
-  const CategoryRowItems({
+class RatingRowItems extends StatefulWidget {
+  const RatingRowItems({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<CategoryRowItems> createState() => _CategoryRowItemsState();
+  State<RatingRowItems> createState() => _RatingRowItemsState();
 }
 
-class _CategoryRowItemsState extends State<CategoryRowItems> {
+class _RatingRowItemsState extends State<RatingRowItems> {
   int currentIndex = -1;
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class _CategoryRowItemsState extends State<CategoryRowItems> {
           SizedBox(
             width: getPropScreenWidth(20),
           ),
-          CategoryRowItem(
+          RatingRowItem(
             isSelected: currentIndex == -1,
             title: "Все",
             onTap: () {
@@ -34,11 +35,11 @@ class _CategoryRowItemsState extends State<CategoryRowItems> {
             },
           ),
           ...List.generate(
-            allCategoryTitles.length,
+            allRatingTitles.length,
             (index) {
-              return CategoryRowItem(
+              return RatingRowItem(
                 isSelected: currentIndex == index,
-                title: allCategoryTitles[index],
+                title: allRatingTitles[index],
                 onTap: () {
                   setState(() {
                     currentIndex = index;
@@ -53,11 +54,11 @@ class _CategoryRowItemsState extends State<CategoryRowItems> {
   }
 }
 
-class CategoryRowItem extends StatelessWidget {
+class RatingRowItem extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
   final bool isSelected;
-  const CategoryRowItem({
+  const RatingRowItem({
     Key? key,
     required this.title,
     required this.onTap,
@@ -74,7 +75,7 @@ class CategoryRowItem extends StatelessWidget {
         child: AnimatedContainer(
           duration: defaultDuration,
           padding: EdgeInsets.symmetric(
-              vertical: getPropScreenWidth(8),
+              vertical: getPropScreenWidth(5),
               horizontal: getPropScreenWidth(15)),
           decoration: BoxDecoration(
               color: isSelected ? kPrimaryColor : null,
@@ -82,11 +83,17 @@ class CategoryRowItem extends StatelessWidget {
                 getPropScreenWidth(20),
               ),
               border: Border.all(width: 2)),
-          child: Text(
-            title,
-            style: tertiaryTextStyle.copyWith(
-                fontWeight: FontWeight.bold,
-                color: isSelected ? Colors.white : kPrimaryColor),
+          child: Row(
+            children: [
+              Icon(Icons.star, color: isSelected ? Colors.white : kPrimaryColor,),
+              SizedBox(width: getPropScreenWidth(5),),
+              Text(
+                title,
+                style: tertiaryTextStyle.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: isSelected ? Colors.white : kPrimaryColor),
+              ),
+            ],
           ),
         ),
       ),

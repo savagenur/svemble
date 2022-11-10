@@ -4,6 +4,7 @@ import 'package:svemble/auth/Login/login_screen.dart';
 import 'package:svemble/auth/SignIn/signin_screen.dart';
 import 'package:svemble/auth/Signup/signup_screen.dart';
 import 'package:svemble/screens/AccountSetup/account_setup_screen.dart';
+import 'package:svemble/screens/Category/category_screen.dart';
 import 'package:svemble/screens/Favorite/favorite_screen.dart';
 import 'package:svemble/screens/Home/home_screen.dart';
 import 'package:svemble/screens/Main/main_screen.dart';
@@ -12,6 +13,8 @@ import 'package:svemble/screens/Popular/popular_screen.dart';
 import 'package:svemble/screens/SpecialOffer/special_offer_screen.dart';
 import 'package:svemble/screens/Splash/splash_screen.dart';
 import 'package:svemble/screens/Welcome/welcome_screen.dart';
+
+import 'screens/SearchHome/search_home_screen.dart';
 
 class AppRoute {
   Route onGenerateRoute(RouteSettings routeSettings) {
@@ -75,6 +78,16 @@ class AppRoute {
       case SpecialOfferScreen.routeName:
         return PageTransition(
           child: const SpecialOfferScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+      case SearchHomeScreen.routeName:
+        return PageTransition(
+          child: const SearchHomeScreen(),
+          type: PageTransitionType.fade,
+        );
+      case CategoryScreen.routeName:
+        return PageTransition(
+          child: const CategoryScreen(),
           type: PageTransitionType.rightToLeft,
         );
       default:

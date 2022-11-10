@@ -35,8 +35,11 @@ dependencies:
     sdk: flutter
   flutter_svg: ^1.1.6
   google_fonts: ^3.0.1
+  intl: ^0.17.0
   introduction_screen: ^3.0.2
   page_transition: ^2.0.9
+  syncfusion_flutter_core: ^20.3.56
+  syncfusion_flutter_sliders: ^20.3.56
 
 dev_dependencies:
   flutter_lints: ^2.0.0

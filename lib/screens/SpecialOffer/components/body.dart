@@ -12,7 +12,6 @@ class Body extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: getPropScreenWidth(20)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

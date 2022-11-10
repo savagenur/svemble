@@ -104,6 +104,7 @@ InputDecorationTheme inputDecorationTheme() {
     ),
     enabledBorder: enabledBorder(),
     focusedBorder: outlineInputBorder(),
+    disabledBorder: enabledBorder(),
   );
 }
 

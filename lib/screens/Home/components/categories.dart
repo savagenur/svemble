@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:svemble/screens/Category/category_screen.dart';
 
 import '../../../constants.dart';
 import '../../../data/categories.dart';
@@ -23,7 +24,9 @@ class Categories extends StatelessWidget {
         return CategoryItem(
           title: allCategoryTitles[index],
           iconImg: allIconImgs[index],
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, CategoryScreen.routeName);
+          },
         );
       },
     );
@@ -47,7 +50,7 @@ class CategoryItem extends StatelessWidget {
       children: [
         InkWell(
           borderRadius: BorderRadius.circular(getPropScreenWidth(30)),
-          onTap: () {},
+          onTap: onTap,
           child: CircleAvatar(
             radius: getPropScreenWidth(30),
             backgroundColor: kSecondaryColor,

@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:svemble/screens/Popular/popular_screen.dart';
+import 'package:svemble/screens/SearchHome/search_home_screen.dart';
 
-import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({
     Key? key,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: getPropScreenWidth(20)),
-      child: TextFormField(
-        decoration: InputDecoration(
-          hintText: "Поиск",
-          prefixIcon: const Icon(Icons.search),
-          suffixIcon: IconButton(
-            onPressed: () {
-            },
-            icon: const Icon(
+      child: GestureDetector(
+        onTap: () => Navigator.pushNamed(context, SearchHomeScreen.routeName),
+        child: TextFormField(
+          onTap: () {
+            // Learn FocusScope.of(context).requestFocus(FocusNode());
+            // FocusManager.instance.primaryFocus!.unfocus();
+          },
+          decoration: const InputDecoration(
+            enabled: false,
+            hintText: "Поиск",
+            prefixIcon: Icon(Icons.search),
+            suffixIcon: Icon(
               Icons.filter_alt_outlined,
-              color: kPrimaryColor,
             ),
           ),
         ),

@@ -8,12 +8,16 @@ class DefaultButton extends StatelessWidget {
   final String text;
   final VoidCallback onTap;
   final double width;
+  final Color backgroundColor;
+  final Color textColor;
 
   const DefaultButton({
     Key? key,
     required this.text,
     required this.onTap,
     this.width = double.infinity,
+     this.backgroundColor=kPrimaryColor,
+     this.textColor=Colors.white,
   }) : super(key: key);
 
   @override
@@ -22,11 +26,15 @@ class DefaultButton extends StatelessWidget {
       width: width,
       child: ElevatedButton(
         onPressed: onTap,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: backgroundColor,
+        ),
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: getPropScreenWidth(15)),
           child: AutoSizeText(
             text,
-            style: const TextStyle(
+            style:  TextStyle(
+              color: textColor,
               fontSize: kPrimaryFontSize,
               fontWeight: FontWeight.bold,
             ),

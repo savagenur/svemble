@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-import '../data/categories.dart';
-import '../size_config.dart';
+import '../../../constants.dart';
+import '../../../data/sorts_by.dart';
+import '../../../size_config.dart';
 
-class CategoryRowItems extends StatefulWidget {
-  const CategoryRowItems({
+class SortByRowItems extends StatefulWidget {
+  const SortByRowItems({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<CategoryRowItems> createState() => _CategoryRowItemsState();
+  State<SortByRowItems> createState() => _SortByRowItemsState();
 }
 
-class _CategoryRowItemsState extends State<CategoryRowItems> {
-  int currentIndex = -1;
+class _SortByRowItemsState extends State<SortByRowItems> {
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -24,21 +24,12 @@ class _CategoryRowItemsState extends State<CategoryRowItems> {
           SizedBox(
             width: getPropScreenWidth(20),
           ),
-          CategoryRowItem(
-            isSelected: currentIndex == -1,
-            title: "Все",
-            onTap: () {
-              setState(() {
-                currentIndex = -1;
-              });
-            },
-          ),
           ...List.generate(
-            allCategoryTitles.length,
+            allSortByTitles.length,
             (index) {
-              return CategoryRowItem(
+              return SortByRowItem(
                 isSelected: currentIndex == index,
-                title: allCategoryTitles[index],
+                title: allSortByTitles[index],
                 onTap: () {
                   setState(() {
                     currentIndex = index;
@@ -53,11 +44,11 @@ class _CategoryRowItemsState extends State<CategoryRowItems> {
   }
 }
 
-class CategoryRowItem extends StatelessWidget {
+class SortByRowItem extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
   final bool isSelected;
-  const CategoryRowItem({
+  const SortByRowItem({
     Key? key,
     required this.title,
     required this.onTap,
@@ -69,7 +60,7 @@ class CategoryRowItem extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(right: getPropScreenWidth(10)),
       child: InkWell(
-        borderRadius: BorderRadius.circular(getPropScreenWidth(20)),
+        borderRadius: BorderRadius.circular(getPropScreenWidth(10)),
         onTap: onTap,
         child: AnimatedContainer(
           duration: defaultDuration,
