@@ -13,7 +13,7 @@ import 'title_and_favorite_btn.dart';
 
 class Body extends StatelessWidget {
   final bool hasSize;
-  const Body({super.key,  this.hasSize=false});
+  const Body({super.key, this.hasSize = false});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class Body extends StatelessWidget {
                     Row(
                       children: [
                         const SmallTextBg(text: "8554 sold"),
-                          SizedBox(
+                        SizedBox(
                           width: getPropScreenWidth(5),
                         ),
                         const Icon(Icons.star),
@@ -59,28 +59,36 @@ class Body extends StatelessWidget {
                     SizedBox(
                       height: getPropScreenWidth(10),
                     ),
-                    const Text(
-                        "data data data data data data data data data data data data data data "),
+                    GestureDetector(
+                      onTap: () {},
+                      child: const Text(
+                        "data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data ",
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
                     SizedBox(
                       height: getPropScreenWidth(20),
                     ),
                     Row(
                       children: [
-                      hasSize?  Flexible(
-                          flex: 6,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const SmallTitle(title: "Размер"),
-                              SizedBox(
-                                height: getPropScreenWidth(10),
-                              ),
-                              const SizeList(),
-                            ],
-                          ),
-                        ):Container(),
+                        hasSize
+                            ? Flexible(
+                                flex: 6,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const SmallTitle(title: "Размер"),
+                                    SizedBox(
+                                      height: getPropScreenWidth(10),
+                                    ),
+                                    const SizeList(),
+                                  ],
+                                ),
+                              )
+                            : Container(),
                         SizedBox(
-                          width:hasSize? getPropScreenWidth(30):0,
+                          width: hasSize ? getPropScreenWidth(30) : 0,
                         ),
                         Expanded(
                           flex: 5,
@@ -110,40 +118,8 @@ class Body extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: getPropScreenWidth(10),
+                      height: getPropScreenWidth(20),
                     ),
-                    const Divider(),
-                    SizedBox(
-                      height: getPropScreenWidth(10),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text("Сумма"),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              "4500 сом",
-                              style: headerTextStyle,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: getPropScreenWidth(30),
-                        ),
-                        Expanded(
-                            child: DefaultButton(
-                                text: "Добавить в корзину", onTap: () {}))
-                      ],
-                    ),
-                    SizedBox(
-                      height: getPropScreenWidth(100),
-                    )
                   ],
                 ),
               ),
@@ -154,11 +130,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
