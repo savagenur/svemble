@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:svemble/components/default_button.dart';
 import 'package:svemble/components/small_text_bg.dart';
 import 'package:svemble/constants.dart';
+import 'package:svemble/screens/Comments/comments_screen.dart';
 import 'package:svemble/size_config.dart';
 
 import 'carousel_with_indicator_demo.dart';
@@ -41,11 +42,18 @@ class Body extends StatelessWidget {
                         SizedBox(
                           width: getPropScreenWidth(5),
                         ),
-                        const Icon(Icons.star),
-                        SizedBox(
-                          width: getPropScreenWidth(5),
-                        ),
-                        const Text("4.5 (6,388 отзывов)")
+                        GestureDetector(
+                          onTap: () => Navigator.pushNamed(context, CommentsScreen.routeName),
+                          child: Row(
+                            children: [
+                              const Icon(Icons.star),
+                              SizedBox(
+                                width: getPropScreenWidth(5),
+                              ),
+                              const Text("4.5 (6,388 отзывов)"),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                     SizedBox(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:svemble/components/category_row_items.dart';
 import 'package:svemble/screens/Home/components/product_tile_list.dart';
 import 'package:svemble/size_config.dart';
 
@@ -15,7 +14,7 @@ class Body extends StatelessWidget {
           children: [
           
             SizedBox(
-              height: getPropScreenWidth(20),
+              height: getPropScreenWidth(10),
             ),
             ProductTileList(),
             SizedBox(height: getPropScreenWidth(50),)
