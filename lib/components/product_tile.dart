@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:svemble/screens/DetailProduct/detail_product_screen.dart';
 
 import '../constants.dart';
 import '../models/product.dart';
 import '../size_config.dart';
+import 'small_text_bg.dart';
 
 class ProductTile extends StatefulWidget {
   final Product product;
@@ -20,7 +22,7 @@ class _ProductTileState extends State<ProductTile> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        
+        Navigator.pushNamed(context, DetailProductScreen.routeName);
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,17 +50,21 @@ class _ProductTileState extends State<ProductTile> {
                     right: getPropScreenWidth(15),
                     top: getPropScreenWidth(15),
                     child: InkWell(
-                      borderRadius: BorderRadius.circular(getPropScreenWidth(15)),
+                      borderRadius:
+                          BorderRadius.circular(getPropScreenWidth(15)),
                       onTap: () {
                         setState(() {
-                          widget.product.isFavorite = !widget.product.isFavorite;
+                          widget.product.isFavorite =
+                              !widget.product.isFavorite;
                         });
                       },
                       child: CircleAvatar(
                         radius: getPropScreenWidth(15),
                         backgroundColor: kPrimaryColor,
                         child: Icon(
-                         widget.product.isFavorite?Icons.favorite: Icons.favorite_border,
+                          widget.product.isFavorite
+                              ? Icons.favorite
+                              : Icons.favorite_border,
                           color: Colors.white,
                           size: getPropScreenWidth(18),
                         ),
@@ -89,19 +95,7 @@ class _ProductTileState extends State<ProductTile> {
                 width: getPropScreenWidth(5),
               ),
               Text("${widget.product.rating}  |  "),
-              Container(
-                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                decoration: BoxDecoration(
-                  color: kSecondaryColor,
-                  borderRadius: BorderRadius.circular(
-                    getPropScreenWidth(5),
-                  ),
-                ),
-                child: Text(
-                  "${widget.product.soldCount} продано",
-                  style: quaternaryTextStyle,
-                ),
-              ),
+              SmallTextBg(text: "${widget.product.soldCount} продано"),
             ],
           ),
           SizedBox(
@@ -116,3 +110,5 @@ class _ProductTileState extends State<ProductTile> {
     );
   }
 }
+
+
