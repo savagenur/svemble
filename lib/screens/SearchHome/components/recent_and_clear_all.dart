@@ -25,8 +25,7 @@ class RecentAndClearAll extends StatelessWidget {
           },
           child: Text(
             "Очистить Всё",
-            style: tertiaryTextStyle.copyWith(
-                fontWeight: FontWeight.bold, color: kPrimaryColor),
+            style: tertiaryBoldTextStyle,
           ),
         ),
       ],

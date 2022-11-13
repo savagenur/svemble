@@ -32,10 +32,9 @@ class RatingCircleIcon extends StatelessWidget {
           ),
           Text(
             "4.3",
-            style: tertiaryTextStyle.copyWith(
-                fontWeight: FontWeight.bold,
+            style: tertiaryBoldTextStyle.copyWith(
                 fontSize: kTertiaryFontSize - 1,
-                color: kPrimaryColor),
+                ),
           ),
         ],
       ),

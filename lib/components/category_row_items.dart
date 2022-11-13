@@ -84,8 +84,7 @@ class CategoryRowItem extends StatelessWidget {
               border: Border.all(width: 2)),
           child: Text(
             title,
-            style: tertiaryTextStyle.copyWith(
-                fontWeight: FontWeight.bold,
+            style: tertiaryBoldTextStyle.copyWith(
                 color: isSelected ? Colors.white : kPrimaryColor),
           ),
         ),

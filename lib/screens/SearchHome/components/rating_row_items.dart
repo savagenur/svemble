@@ -89,8 +89,7 @@ class RatingRowItem extends StatelessWidget {
               SizedBox(width: getPropScreenWidth(5),),
               Text(
                 title,
-                style: tertiaryTextStyle.copyWith(
-                    fontWeight: FontWeight.bold,
+                style: tertiaryBoldTextStyle.copyWith(
                     color: isSelected ? Colors.white : kPrimaryColor),
               ),
             ],

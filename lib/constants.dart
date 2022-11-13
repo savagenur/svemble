@@ -42,15 +42,18 @@ final defaultTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-
-
 final tertiaryTextStyle = TextStyle(
     fontSize: getPropScreenWidth(kTertiaryFontSize), color: kTertiaryTextColor);
+final tertiaryBoldTextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  color: kPrimaryColor,
+  fontSize: getPropScreenWidth(kTertiaryFontSize),
+);
 
 final quaternaryTextStyle = TextStyle(
     fontSize: getPropScreenWidth(kQuaternaryFontSize), color: kPrimaryColor);
 
-const defaultDuration = Duration(milliseconds: 300);
+const defaultDuration = Duration(milliseconds: 200);
 
 // Form error
 final RegExp emailValidatorRegExp =

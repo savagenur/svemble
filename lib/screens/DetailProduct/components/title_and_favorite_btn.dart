@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:svemble/size_config.dart';
 
 import '../../../constants.dart';
 
@@ -14,15 +15,15 @@ class TitleAndFavoriteBtn extends StatelessWidget {
       children: [
         Text(
           "Mini Leather Bag",
-          style: headerTextStyle.copyWith(fontSize: 28),
+          style: headerTextStyle.copyWith(fontSize: getPropScreenWidth(28)),
           overflow: TextOverflow.ellipsis,
           maxLines: 2,
         ),
         IconButton(
           onPressed: () {},
-          icon: const Icon(
+          icon:  Icon(
             Icons.favorite,
-            size: 30,
+            size: getPropScreenWidth(30),
           ),
         ),
       ],

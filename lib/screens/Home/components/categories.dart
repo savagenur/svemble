@@ -65,10 +65,7 @@ class CategoryItem extends StatelessWidget {
         ),
         Text(
           title,
-          style: tertiaryTextStyle.copyWith(
-            fontWeight: FontWeight.bold,
-            color: kPrimaryColor,
-          ),
+          style: tertiaryBoldTextStyle,
         ),
       ],
     );

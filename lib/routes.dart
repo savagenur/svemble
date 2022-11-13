@@ -24,86 +24,104 @@ class AppRoute {
     switch (routeSettings.name) {
       case SplashScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: SplashScreen.routeName),
           child: const SplashScreen(),
           type: PageTransitionType.fade,
         );
       case WelcomeScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: WelcomeScreen.routeName),
+
           child: const WelcomeScreen(),
           type: PageTransitionType.fade,
         );
       case SignInScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: SignInScreen.routeName),
           child: const SignInScreen(),
           type: PageTransitionType.fade,
         );
       case SignUpScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: SignUpScreen.routeName),
           child: const SignUpScreen(),
           type: PageTransitionType.rightToLeft,
         );
       case LoginScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: LoginScreen.routeName),
           child: const LoginScreen(),
           type: PageTransitionType.rightToLeft,
         );
       case AccountSetupScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: AccountSetupScreen.routeName),
           child: const AccountSetupScreen(),
           type: PageTransitionType.bottomToTop,
         );
       case MainScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: MainScreen.routeName),
           child: const MainScreen(),
           type: PageTransitionType.fade,
         );
       case HomeScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: HomeScreen.routeName),
           child: const HomeScreen(),
           type: PageTransitionType.rightToLeft,
         );
       case NotificationScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: NotificationScreen.routeName),
           child: const NotificationScreen(),
           type: PageTransitionType.rightToLeft,
         );
       case FavoriteScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: FavoriteScreen.routeName),
           child: const FavoriteScreen(),
           type: PageTransitionType.rightToLeft,
         );
       case PopularScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: PopularScreen.routeName),
           child: const PopularScreen(),
           type: PageTransitionType.rightToLeft,
         );
       case SpecialOfferScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: SpecialOfferScreen.routeName),
           child: const SpecialOfferScreen(),
           type: PageTransitionType.rightToLeft,
         );
       case SearchHomeScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: SearchHomeScreen.routeName),
           child: const SearchHomeScreen(),
           type: PageTransitionType.fade,
         );
       case CategoryScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: CategoryScreen.routeName),
           child: const CategoryScreen(),
           type: PageTransitionType.rightToLeft,
         );
       case DetailProductScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: DetailProductScreen.routeName),
           child: const DetailProductScreen(),
           type: PageTransitionType.rightToLeft,
         );
       case CommentsScreen.routeName:
         return PageTransition(
+          settings: const RouteSettings(name: CommentsScreen.routeName),
           child: const CommentsScreen(),
           type: PageTransitionType.rightToLeft,
         );
       default:
         return PageTransition(
+          settings: const RouteSettings(name: "/error-404"),
             child: const Center(
               child: Text("Ошибка!"),
             ),

@@ -5,6 +5,7 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 import '../../../components/category_row_items.dart';
 import '../../../components/default_button.dart';
+import '../../../components/linear_oval_staff.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 import 'rating_row_items.dart';
@@ -25,19 +26,7 @@ class BottomFilterSheetState extends State<BottomFilterSheet> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Padding(
-            padding: EdgeInsets.all(getPropScreenWidth(5)),
-            child: Container(
-              width: getPropScreenWidth(40),
-              height: getPropScreenWidth(3),
-              decoration: BoxDecoration(
-                color: kSecondaryColor,
-                borderRadius: BorderRadius.circular(
-                  getPropScreenWidth(30),
-                ),
-              ),
-            ),
-          ),
+          LinearOvalStaff(),
           SizedBox(
             height: getPropScreenWidth(15),
           ),
@@ -108,7 +97,6 @@ class BottomFilterSheetState extends State<BottomFilterSheet> {
                     text: "Сбросить",
                     onTap: () {
                       Navigator.pop(context);
-
                     },
                     width: SizeConfig.screenWidth * .4,
                   ),

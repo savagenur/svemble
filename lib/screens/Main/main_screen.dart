@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/constants.dart';
+import 'package:svemble/screens/Cart/cart_screen.dart';
 import 'package:svemble/screens/Home/home_screen.dart';
 
 import '../../size_config.dart';
@@ -16,7 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   int currentIndex = 0;
   List<Widget> pages = [
     const HomeScreen(),
-    Container(),
+    const CartScreen(),
     Container(),
     Container(),
     Container(),

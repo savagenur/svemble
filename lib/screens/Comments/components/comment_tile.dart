@@ -20,9 +20,7 @@ class CommentTile extends StatelessWidget {
           ),
           title: Text(
             "Nurbolot Muratbekuulu",
-            style: tertiaryTextStyle.copyWith(
-                fontWeight: FontWeight.bold,
-                color: kPrimaryColor),
+            style: tertiaryBoldTextStyle,
             overflow: TextOverflow.ellipsis,
           ),
           trailing: ConstrainedBox(
