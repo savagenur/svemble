@@ -6,29 +6,45 @@ import 'constants.dart';
 
 ThemeData theme() {
   return ThemeData(
-    iconTheme: IconThemeData(color: kPrimaryColor),
+    iconTheme: iconTheme(),
     primarySwatch: black,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme(),
     inputDecorationTheme: inputDecorationTheme(),
     textTheme: textTheme(),
-    tabBarTheme: const TabBarTheme(labelColor: Colors.black),
+    tabBarTheme: tabBarTheme(),
     textButtonTheme: textButtonTheme(),
     elevatedButtonTheme: elevatedButtonTheme(),
     popupMenuTheme: popupMenuTheme(),
     listTileTheme: listTileTheme(),
-    radioTheme: RadioThemeData(
-      fillColor: MaterialStateProperty.all(kPrimaryColor),
-      
-    ),
-    bottomAppBarTheme: BottomAppBarTheme(
-      shape: AutomaticNotchedShape(
-        RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-        ),
+    bottomSheetTheme: bottomSheetTheme(),
+    radioTheme: radioTheme(),
+    
+  );
+}
 
-      )
-    )
+TabBarTheme tabBarTheme() => const TabBarTheme(labelColor: Colors.black);
+
+IconThemeData iconTheme() =>const IconThemeData(color: kPrimaryColor);
+
+RadioThemeData radioTheme() {
+  return RadioThemeData(
+    fillColor: MaterialStateProperty.all(kPrimaryColor),
+    
+  );
+}
+
+BottomSheetThemeData bottomSheetTheme() {
+  return const BottomSheetThemeData(
+    shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(
+          40,
+        ),
+        topRight: Radius.circular(
+          40,
+        ),
+      )),
   );
 }
 

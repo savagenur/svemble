@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:svemble/screens/OrdersInProcess/components/leave_comment_sheet.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -103,7 +104,13 @@ class OrderTile extends StatelessWidget {
                                     getPropScreenWidth(20)),
                                 side: const BorderSide(color: kPrimaryColor),
                               )),
-                              onPressed: () {},
+                              onPressed: () {
+                                showModalBottomSheet(
+                                  isScrollControlled: true,
+                                  context: context,
+                                  builder: (context) => LeaveCommentSheet(),
+                                );
+                              },
                               child: const Text(
                                 "Оставить отзыв",
                                 style: TextStyle(color: kPrimaryColor),

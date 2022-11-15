@@ -115,15 +115,7 @@ class CartTile extends StatelessWidget {
   Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
     return showModalBottomSheet(
         context: context,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(
-            getPropScreenWidth(40),
-          ),
-          topRight: Radius.circular(
-            getPropScreenWidth(40),
-          ),
-        )),
+        
         builder: (context) {
           return RemoveBottomSheet();
         });

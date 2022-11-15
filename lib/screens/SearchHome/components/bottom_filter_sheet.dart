@@ -25,6 +25,7 @@ class BottomFilterSheetState extends State<BottomFilterSheet> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           LinearOvalStaff(),
           SizedBox(

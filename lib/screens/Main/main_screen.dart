@@ -21,7 +21,6 @@ class _MainScreenState extends State<MainScreen> {
     const CartScreen(),
     const OrdersScreen (),
     Container(),
-    Container(),
   ];
 
   @override
@@ -47,15 +46,10 @@ class _MainScreenState extends State<MainScreen> {
         ),
         label: 'Заказы',
       ),
+       
        BottomNavigationBarItem(
         icon: Icon(
-          currentIndex == 3 ? Icons.wallet_travel :  Icons.wallet_travel_rounded,
-        ),
-        label: 'Кошелёк',
-      ),
-       BottomNavigationBarItem(
-        icon: Icon(
-        currentIndex == 4 ? Icons.person :    Icons.person_outline_outlined,
+        currentIndex == 3 ? Icons.person :    Icons.person_outline_outlined,
         ),
         label: 'Профиль',
       ),

@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
             DefaultButton(
               text: "Добавить новый адрес",
               onTap: () {},
-              backgroundColor: kTertiaryTextColor,
+              backgroundColor: kBorderColor,
               textColor: kPrimaryColor,
             )
           ],

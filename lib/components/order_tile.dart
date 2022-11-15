@@ -103,7 +103,6 @@ Container buildImage() {
               aspectRatio: 1,
               child: Image.asset(
                 "assets/images/28-jacket-png-image.png",
-                width: 30,
               ),
             ),
           );

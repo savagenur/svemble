@@ -86,18 +86,9 @@ class _BodyState extends State<Body> {
           onPressed: () {
             showModalBottomSheet(
                 context: context,
-                constraints: BoxConstraints.tight(
-                    Size(double.infinity, SizeConfig.screenHeight * .8)),
+                
                 isScrollControlled: true,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(
-                    getPropScreenWidth(40),
-                  ),
-                  topRight: Radius.circular(
-                    getPropScreenWidth(40),
-                  ),
-                )),
+                
                 builder: (context) {
                   return ClipRRect(
                       borderRadius:
