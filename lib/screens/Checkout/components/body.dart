@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:svemble/components/cart_item.dart';
+import 'package:svemble/components/cart_tile.dart';
 import 'package:svemble/constants.dart';
 import 'package:svemble/screens/ChooseShipping/choose_shipping_screen.dart';
 import 'package:svemble/screens/ShippingAddress/shipping_address_screen.dart';
@@ -85,7 +85,7 @@ class Body extends StatelessWidget {
               children: [
                 ...List.generate(
                   4,
-                  (index) => const CartItem(
+                  (index) => const CartTile(
                     isCheckoutScreen: true,
                   ),
                 )

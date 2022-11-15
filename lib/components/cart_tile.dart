@@ -6,9 +6,9 @@ import '../size_config.dart';
 import '../screens/Cart/components/remove_bottom_sheer.dart';
 import '../screens/Cart/components/small_remove_and_add_btn.dart';
 
-class CartItem extends StatelessWidget {
+class CartTile extends StatelessWidget {
   final bool isCheckoutScreen;
-  const CartItem({
+  const CartTile({
     Key? key,
     this.isCheckoutScreen = false,
   }) : super(key: key);
@@ -89,18 +89,17 @@ class CartItem extends StatelessWidget {
                       ),
                       isCheckoutScreen
                           ? Container(
-                            width: getPropScreenWidth(30),
-                            height: getPropScreenWidth(30),
-                            alignment: Alignment.center,
-                            decoration: const BoxDecoration(
-                              color: kSecondaryColor,
-                              shape: BoxShape.circle
-                            ),
-                            child: Text(
+                              width: getPropScreenWidth(30),
+                              height: getPropScreenWidth(30),
+                              alignment: Alignment.center,
+                              decoration: const BoxDecoration(
+                                  color: kSecondaryColor,
+                                  shape: BoxShape.circle),
+                              child: Text(
                                 "1",
                                 style: tertiaryBoldTextStyle,
                               ),
-                          )
+                            )
                           : const SmallRemoveAndAddBtn(),
                     ],
                   )
@@ -115,35 +114,35 @@ class CartItem extends StatelessWidget {
 
   Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
     return showModalBottomSheet(
-                                  context: context,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(
-                                      getPropScreenWidth(40),
-                                    ),
-                                    topRight: Radius.circular(
-                                      getPropScreenWidth(40),
-                                    ),
-                                  )),
-                                  builder: (context) {
-                                    return RemoveBottomSheet();
-                                  });
+        context: context,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(
+            getPropScreenWidth(40),
+          ),
+          topRight: Radius.circular(
+            getPropScreenWidth(40),
+          ),
+        )),
+        builder: (context) {
+          return RemoveBottomSheet();
+        });
   }
 
   Container buildImage() {
     return Container(
-            padding: EdgeInsets.all(getPropScreenWidth(5)),
-            width: getPropScreenWidth(100),
-            decoration: BoxDecoration(
-                color: kSecondaryColor,
-                borderRadius: BorderRadius.circular(getPropScreenWidth(20))),
-            child: AspectRatio(
-              aspectRatio: 1,
-              child: Image.asset(
-                "assets/images/28-jacket-png-image.png",
-                width: 30,
-              ),
-            ),
-          );
+      padding: EdgeInsets.all(getPropScreenWidth(5)),
+      width: getPropScreenWidth(100),
+      decoration: BoxDecoration(
+          color: kSecondaryColor,
+          borderRadius: BorderRadius.circular(getPropScreenWidth(20))),
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: Image.asset(
+          "assets/images/28-jacket-png-image.png",
+          width: 30,
+        ),
+      ),
+    );
   }
 }

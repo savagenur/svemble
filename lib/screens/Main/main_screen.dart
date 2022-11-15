@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:svemble/constants.dart';
 import 'package:svemble/screens/Cart/cart_screen.dart';
 import 'package:svemble/screens/Home/home_screen.dart';
+import 'package:svemble/screens/Orders/orders_screen.dart';
 
 import '../../size_config.dart';
 
@@ -18,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> pages = [
     const HomeScreen(),
     const CartScreen(),
-    Container(),
+    const OrdersScreen (),
     Container(),
     Container(),
   ];

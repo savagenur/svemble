@@ -4,7 +4,7 @@ import '../../../components/default_button.dart';
 import '../../../components/linear_oval_staff.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
-import '../../../components/cart_item.dart';
+import '../../../components/cart_tile.dart';
 
 class RemoveBottomSheet extends StatelessWidget {
   const RemoveBottomSheet({
@@ -33,7 +33,7 @@ class RemoveBottomSheet extends StatelessWidget {
           SizedBox(
             height: getPropScreenWidth(15),
           ),
-          CartItem(
+          CartTile(
             isCheckoutScreen: false,
           ),
           Divider(),
