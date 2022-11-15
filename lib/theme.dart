@@ -16,6 +16,14 @@ ThemeData theme() {
     textButtonTheme: textButtonTheme(),
     elevatedButtonTheme: elevatedButtonTheme(),
     popupMenuTheme: popupMenuTheme(),
+    bottomAppBarTheme: BottomAppBarTheme(
+      shape: AutomaticNotchedShape(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+        ),
+
+      )
+    )
   );
 }
 

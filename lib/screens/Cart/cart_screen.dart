@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/components/bottom_price_button.dart';
 import 'package:svemble/screens/Cart/components/body.dart';
+import 'package:svemble/screens/Checkout/checkout_screen.dart';
 
 import '../../constants.dart';
 import '../../size_config.dart';
@@ -12,14 +13,19 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-backgroundColor: kSecondaryColor,      
+      backgroundColor: kSecondaryColor,
       appBar: buildAppBar(context),
       body: Body(),
-      bottomNavigationBar: BottomPriceButton(price: 14300, buttonText: "Оплатить", onTap: () {
-        
-      },),
+      bottomNavigationBar: BottomPriceButton(
+        price: 14300,
+        buttonText: "Оплатить",
+        onTap: () {
+          Navigator.of(context).pushNamed(CheckoutScreen.routeName);
+        },
+      ),
     );
   }
+
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,

@@ -5,6 +5,7 @@ import 'package:svemble/auth/SignIn/signin_screen.dart';
 import 'package:svemble/auth/Signup/signup_screen.dart';
 import 'package:svemble/screens/AccountSetup/account_setup_screen.dart';
 import 'package:svemble/screens/Category/category_screen.dart';
+import 'package:svemble/screens/Checkout/checkout_screen.dart';
 import 'package:svemble/screens/Comments/comments_screen.dart';
 import 'package:svemble/screens/DetailProduct/detail_product_screen.dart';
 import 'package:svemble/screens/Favorite/favorite_screen.dart';
@@ -117,6 +118,12 @@ class AppRoute {
         return PageTransition(
           settings: const RouteSettings(name: CommentsScreen.routeName),
           child: const CommentsScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+      case CheckoutScreen.routeName:
+        return PageTransition(
+          settings: const RouteSettings(name: CheckoutScreen.routeName),
+          child: const CheckoutScreen(),
           type: PageTransitionType.rightToLeft,
         );
       default:

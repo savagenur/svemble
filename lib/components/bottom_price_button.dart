@@ -17,6 +17,7 @@ class BottomPriceButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
+    
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: getPropScreenWidth(20)),
         height: 80,

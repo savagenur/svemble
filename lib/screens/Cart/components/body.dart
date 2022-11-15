@@ -6,7 +6,7 @@ import 'package:svemble/constants.dart';
 import 'package:svemble/size_config.dart';
 
 import '../../../components/linear_oval_staff.dart';
-import 'cart_item.dart';
+import '../../../components/cart_item.dart';
 import 'small_remove_and_add_btn.dart';
 
 class Body extends StatelessWidget {
