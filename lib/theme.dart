@@ -16,6 +16,11 @@ ThemeData theme() {
     textButtonTheme: textButtonTheme(),
     elevatedButtonTheme: elevatedButtonTheme(),
     popupMenuTheme: popupMenuTheme(),
+    listTileTheme: listTileTheme(),
+    radioTheme: RadioThemeData(
+      fillColor: MaterialStateProperty.all(kPrimaryColor),
+      
+    ),
     bottomAppBarTheme: BottomAppBarTheme(
       shape: AutomaticNotchedShape(
         RoundedRectangleBorder(
@@ -24,6 +29,15 @@ ThemeData theme() {
 
       )
     )
+  );
+}
+
+ListTileThemeData listTileTheme() {
+  return ListTileThemeData(
+    shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30),),
+        contentPadding: EdgeInsets.symmetric(
+        vertical: 10, horizontal: 15)
   );
 }
 

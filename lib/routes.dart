@@ -6,6 +6,7 @@ import 'package:svemble/auth/Signup/signup_screen.dart';
 import 'package:svemble/screens/AccountSetup/account_setup_screen.dart';
 import 'package:svemble/screens/Category/category_screen.dart';
 import 'package:svemble/screens/Checkout/checkout_screen.dart';
+import 'package:svemble/screens/ChooseShipping/choose_shipping_screen.dart';
 import 'package:svemble/screens/Comments/comments_screen.dart';
 import 'package:svemble/screens/DetailProduct/detail_product_screen.dart';
 import 'package:svemble/screens/Favorite/favorite_screen.dart';
@@ -13,6 +14,7 @@ import 'package:svemble/screens/Home/home_screen.dart';
 import 'package:svemble/screens/Main/main_screen.dart';
 import 'package:svemble/screens/Notification/notification_screen.dart';
 import 'package:svemble/screens/Popular/popular_screen.dart';
+import 'package:svemble/screens/ShippingAddress/shipping_address_screen.dart';
 import 'package:svemble/screens/SpecialOffer/special_offer_screen.dart';
 import 'package:svemble/screens/Splash/splash_screen.dart';
 import 'package:svemble/screens/Welcome/welcome_screen.dart';
@@ -124,6 +126,18 @@ class AppRoute {
         return PageTransition(
           settings: const RouteSettings(name: CheckoutScreen.routeName),
           child: const CheckoutScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+      case ShippingAddressScreen.routeName:
+        return PageTransition(
+          settings: const RouteSettings(name: ShippingAddressScreen.routeName),
+          child: const ShippingAddressScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+      case ChooseShippingScreen.routeName:
+        return PageTransition(
+          settings: const RouteSettings(name: ChooseShippingScreen.routeName),
+          child: const ChooseShippingScreen(),
           type: PageTransitionType.rightToLeft,
         );
       default:
