@@ -138,8 +138,7 @@ class NotificationTile extends StatelessWidget {
     return ListTile(
       onTap: onTap,
       tileColor: Colors.white,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(getPropScreenWidth(20))),
+      
       leading: CircleAvatar(
         backgroundColor: kPrimaryColor,
         radius: getPropScreenWidth(25),

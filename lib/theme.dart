@@ -20,6 +20,12 @@ ThemeData theme() {
     bottomSheetTheme: bottomSheetTheme(),
     radioTheme: radioTheme(),
     
+    checkboxTheme: CheckboxThemeData(
+      
+      shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+    ),
+    
   );
 }
 
@@ -51,8 +57,8 @@ BottomSheetThemeData bottomSheetTheme() {
 ListTileThemeData listTileTheme() {
   return ListTileThemeData(
     shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30),),
-        contentPadding: EdgeInsets.symmetric(
+        borderRadius: BorderRadius.circular(20),),
+        contentPadding: const EdgeInsets.symmetric(
         vertical: 10, horizontal: 15)
   );
 }
@@ -66,10 +72,10 @@ const MaterialColor black = MaterialColor(
       300: Color(0xFF64B5F6),
       400: Color(0xFF42A5F5),
       500: Color(_blackPrimaryValue),
-      600: Color(0xFF1E88E5),
-      700: Color(0xFF1976D2),
-      800: Color(0xFF1565C0),
-      900: Color(0xFF0D47A1),
+      600: Color(_blackPrimaryValue),
+      700: Color(_blackPrimaryValue),
+      800: Color(_blackPrimaryValue),
+      900: Color(_blackPrimaryValue),
   },
 );
 const int _blackPrimaryValue = 0xFF000000;

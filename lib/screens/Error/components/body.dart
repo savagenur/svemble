@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:svemble/screens/OrdersInProcess/components/order_tile.dart';
 import 'package:svemble/size_config.dart';
-
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -13,14 +11,9 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: getPropScreenWidth(20)),
         child: Column(
-          children: [
-            SizedBox(height: getPropScreenWidth(20),),
-            ...List.generate(3, (index) => OrderInProcessTile(isCompletedScreen: true),)
-          ],
+          children: [],
         ),
       ),
     );
   }
-  
 }
-

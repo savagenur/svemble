@@ -5,9 +5,9 @@ import 'package:svemble/screens/OrdersInProcess/components/leave_comment_sheet.d
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-class OrderTile extends StatelessWidget {
+class OrderInProcessTile extends StatelessWidget {
   final bool isCompletedScreen;
-  const OrderTile({super.key, this.isCompletedScreen = false});
+  const OrderInProcessTile({super.key, this.isCompletedScreen = false});
 
   @override
   Widget build(BuildContext context) {

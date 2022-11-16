@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/screens/AccountSetup/account_setup_screen.dart';
+import 'package:svemble/screens/AddressProfile/address_profile_screen.dart';
 
+import '../../../components/check_tile.dart';
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -52,23 +54,11 @@ class _CreateEmailPasswordFieldState extends State<CreateEmailPasswordField> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Checkbox(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              activeColor: kPrimaryColor,
-              value: isRemember,
-              onChanged: (value) {
-                setState(() {
-                  isRemember = value!;
-                });
-              },
-            ),
-            const Text(
-              "Запомни меня",
-              style: TextStyle(
-                color: Colors.black,
-              ),
-            ),
+            CheckTile(
+              text: "Запомни меня",
+              value: true,
+              onChanged: (value) {},
+            )
           ],
         ),
         SizedBox(
@@ -77,7 +67,10 @@ class _CreateEmailPasswordFieldState extends State<CreateEmailPasswordField> {
         DefaultButton(
           text: "Создать",
           onTap: () {
-            Navigator.pushNamed(context, AccountSetupScreen.routeName);
+            Navigator.pushNamed(
+              context,
+              AccountSetupScreen.routeName,
+            );
           },
         ),
       ],

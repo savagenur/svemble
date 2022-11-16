@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: getPropScreenWidth(20),),
-            ...List.generate(3, (index) => OrderTile(),)
+            ...List.generate(3, (index) => OrderInProcessTile(),)
           ],
         ),
       ),

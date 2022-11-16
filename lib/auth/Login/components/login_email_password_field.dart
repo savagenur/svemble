@@ -51,9 +51,8 @@ class _LoginEmailPasswordFieldState extends State<LoginEmailPasswordField> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Checkbox(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
               activeColor: kPrimaryColor,
+              
               value: isRemember,
               onChanged: (value) {
                 setState(() {

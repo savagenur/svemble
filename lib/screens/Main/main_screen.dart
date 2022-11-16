@@ -3,6 +3,7 @@ import 'package:svemble/constants.dart';
 import 'package:svemble/screens/Cart/cart_screen.dart';
 import 'package:svemble/screens/Home/home_screen.dart';
 import 'package:svemble/screens/Orders/orders_screen.dart';
+import 'package:svemble/screens/Profile/profile_screen.dart';
 
 import '../../size_config.dart';
 
@@ -15,12 +16,12 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int currentIndex = 0;
+  int currentIndex = 3;
   List<Widget> pages = [
     const HomeScreen(),
     const CartScreen(),
     const OrdersScreen (),
-    Container(),
+    const ProfileScreen(),
   ];
 
   @override

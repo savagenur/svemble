@@ -14,7 +14,7 @@ class ResultSumContainer extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(getPropScreenWidth(20)),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(getPropScreenWidth(30)),
+        borderRadius: BorderRadius.circular(getPropScreenWidth(20)),
         color: Colors.white,
       ),
       child: Column(

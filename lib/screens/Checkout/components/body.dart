@@ -5,6 +5,7 @@ import 'package:svemble/screens/ChooseShipping/choose_shipping_screen.dart';
 import 'package:svemble/screens/ShippingAddress/shipping_address_screen.dart';
 import 'package:svemble/size_config.dart';
 
+import '../../../components/address_tile.dart';
 import 'result_sum_container.dart';
 
 class Body extends StatelessWidget {
@@ -33,40 +34,9 @@ class Body extends StatelessWidget {
             SizedBox(
               height: getPropScreenWidth(20),
             ),
-            ListTile(
-              tileColor: Colors.white,
-              leading: CircleAvatar(
-                radius: getPropScreenWidth(25),
-                backgroundColor: kSecondaryColor,
-                child: const CircleAvatar(
-                  backgroundColor: kPrimaryColor,
-                  child: Icon(
-                    Icons.location_on,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              title: Text(
-                "Дом",
-                style: tertiaryBoldTextStyle,
-              ),
-              subtitle: Padding(
-                padding: EdgeInsets.only(top: getPropScreenWidth(10)),
-                child: const Text(
-                  "district Lenin, Ala-Archa N337",
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              trailing: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(
-                        context, ShippingAddressScreen.routeName);
-                  },
-                  icon: Icon(
-                    Icons.edit,
-                    color: kPrimaryColor,
-                  )),
-            ),
+            AddressTile(title: "Дом",subtitle: "district Lenin, Ala-Archa N337", onTap: () {
+            Navigator.pushNamed(context, ShippingAddressScreen.routeName);
+          },),
             SizedBox(
               height: getPropScreenWidth(15),
             ),
@@ -104,11 +74,6 @@ class Body extends StatelessWidget {
             ),
             ListTile(
               tileColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(getPropScreenWidth(30))),
-              contentPadding: EdgeInsets.symmetric(
-                  vertical: getPropScreenWidth(10),
-                  horizontal: getPropScreenWidth(15)),
               leading: Icon(
                 Icons.delivery_dining,
                 size: getPropScreenWidth(30),
@@ -145,3 +110,5 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+

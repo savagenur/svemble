@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:svemble/components/default_button.dart';
-import 'package:svemble/screens/Home/home_screen.dart';
+import 'package:svemble/constants.dart';
 import 'package:svemble/screens/Main/main_screen.dart';
 import 'package:svemble/size_config.dart';
+
+import '../../../components/profile_avatar_with_btn.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -18,41 +19,17 @@ class Body extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Stack(
-              clipBehavior: Clip.none,
-              children: [
-                CircleAvatar(
-                  radius: getPropScreenWidth(60),
-                  backgroundColor: Colors.white,
-                  child: Image.asset(
-                    "assets/images/user.png",
-                  ),
-                ),
-                Positioned(
-                  right: -5,
-                  bottom: -3,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          getPropScreenWidth(10),
-                        ),
-                      ),
-                      padding: EdgeInsets.all(0),
-                    ),
-                    onPressed: () {},
-                    child: Icon(
-                      Icons.edit,
-                    ),
-                  ),
-                ),
-              ],
+            ProfileAvatarWithBtn(
+              imageWidget: Image.asset(
+                "assets/images/user.png",
+              ),
+              onTap: () {},
             ),
             SizedBox(
               height: getPropScreenWidth(20),
             ),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Имя",
               ),
             ),
@@ -60,7 +37,7 @@ class Body extends StatelessWidget {
               height: getPropScreenWidth(20),
             ),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Фамилия",
               ),
             ),
@@ -68,7 +45,7 @@ class Body extends StatelessWidget {
               height: getPropScreenWidth(20),
             ),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Ваш Ник",
               ),
             ),
@@ -80,7 +57,7 @@ class Body extends StatelessWidget {
               onTap: () {},
               child: TextFormField(
                 enabled: false,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: "День рождение",
                   suffixIcon: Icon(Icons.calendar_month),
                 ),
@@ -90,7 +67,7 @@ class Body extends StatelessWidget {
               height: getPropScreenWidth(20),
             ),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Электронный адрес",
                 suffixIcon: Icon(Icons.mail),
               ),
@@ -110,7 +87,7 @@ class Body extends StatelessWidget {
                         "🇰🇬",
                         style: TextStyle(fontSize: getPropScreenWidth(30)),
                       ),
-                      Icon(Icons.arrow_drop_down_rounded)
+                      const Icon(Icons.arrow_drop_down_rounded)
                     ],
                   ),
                 ),
@@ -146,9 +123,8 @@ class Body extends StatelessWidget {
                 Navigator.pushReplacementNamed(context, MainScreen.routeName);
               },
             ),
-
             SizedBox(
-              height: getPropScreenWidth(60),
+              height: getPropScreenWidth(40),
             ),
           ],
         ),
@@ -156,3 +132,5 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+

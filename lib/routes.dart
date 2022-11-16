@@ -9,16 +9,21 @@ import 'package:svemble/screens/Checkout/checkout_screen.dart';
 import 'package:svemble/screens/ChooseShipping/choose_shipping_screen.dart';
 import 'package:svemble/screens/Comments/comments_screen.dart';
 import 'package:svemble/screens/DetailProduct/detail_product_screen.dart';
+import 'package:svemble/screens/EditProfile/edit_profile_screen.dart';
+import 'package:svemble/screens/Error/error_screen.dart';
 import 'package:svemble/screens/Favorite/favorite_screen.dart';
 import 'package:svemble/screens/Home/home_screen.dart';
+import 'package:svemble/screens/InviteFriends/invite_friends_screen.dart';
 import 'package:svemble/screens/Main/main_screen.dart';
 import 'package:svemble/screens/Notification/notification_screen.dart';
+import 'package:svemble/screens/NotificationProfile/notification_profile_screen.dart';
 import 'package:svemble/screens/Popular/popular_screen.dart';
 import 'package:svemble/screens/ShippingAddress/shipping_address_screen.dart';
 import 'package:svemble/screens/SpecialOffer/special_offer_screen.dart';
 import 'package:svemble/screens/Splash/splash_screen.dart';
 import 'package:svemble/screens/Welcome/welcome_screen.dart';
 
+import 'screens/AddressProfile/address_profile_screen.dart';
 import 'screens/SearchHome/search_home_screen.dart';
 
 class AppRoute {
@@ -140,13 +145,37 @@ class AppRoute {
           child: const ChooseShippingScreen(),
           type: PageTransitionType.rightToLeft,
         );
+      case EditProfileScreen.routeName:
+        return PageTransition(
+          settings: const RouteSettings(name: EditProfileScreen.routeName),
+          child: const EditProfileScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+      case AddressProfileScreen.routeName:
+        return PageTransition(
+          settings: const RouteSettings(name: AddressProfileScreen.routeName),
+          child: const AddressProfileScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+      case NotificationProfileScreen.routeName:
+        return PageTransition(
+          settings: const RouteSettings(name: NotificationProfileScreen.routeName),
+          child: const NotificationProfileScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+      case InviteFriendsScreen.routeName:
+        return PageTransition(
+          settings: const RouteSettings(name: InviteFriendsScreen.routeName),
+          child: const InviteFriendsScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
       default:
         return PageTransition(
           settings: const RouteSettings(name: "/error-404"),
-            child: const Center(
-              child: Text("Ошибка!"),
-            ),
+            child: const ErrorScreen(),
             type: PageTransitionType.bottomToTop);
     }
   }
 }
+
+

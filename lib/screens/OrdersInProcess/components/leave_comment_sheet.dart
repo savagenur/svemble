@@ -38,7 +38,7 @@ class _LeaveCommentSheetState extends State<LeaveCommentSheet> {
           SizedBox(
             height: getPropScreenWidth(15),
           ),
-          const OrderTile(isCompletedScreen: false),
+          const OrderInProcessTile(isCompletedScreen: false),
           const Divider(),
           SizedBox(
             height: getPropScreenWidth(15),
