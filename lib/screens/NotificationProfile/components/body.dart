@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:svemble/components/address_tile.dart';
 import 'package:svemble/data/notification_items.dart';
 import 'package:svemble/size_config.dart';
 

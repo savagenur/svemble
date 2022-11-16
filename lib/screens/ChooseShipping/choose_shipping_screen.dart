@@ -20,7 +20,7 @@ class ChooseShippingScreen extends StatelessWidget {
           style: headerTextStyle,
         ),
       ),
-      body: Body(),
+      body: const Body(),
       bottomNavigationBar: BottomAppBar(
         child: Padding(
           padding: EdgeInsets.all(getPropScreenWidth(20)),

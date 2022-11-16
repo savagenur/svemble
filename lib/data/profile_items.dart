@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/screens/AddressProfile/address_profile_screen.dart';
 import 'package:svemble/screens/EditProfile/edit_profile_screen.dart';
+import 'package:svemble/screens/HelpCenter/help_center_screen.dart';
 import 'package:svemble/screens/InviteFriends/invite_friends_screen.dart';
 import 'package:svemble/screens/NotificationProfile/notification_profile_screen.dart';
 
@@ -28,7 +29,7 @@ List<Map<String, dynamic>> allProfileItems = [
   {
     "title": "Служба Поддержки",
     "icon": Icons.help_center_outlined,
-    "routeName": '',
+    "routeName": HelpCenterScreen.routeName,
   },
   {
     "title": "Пригласить Друзей",

@@ -33,7 +33,7 @@ class OrderInProcessTile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Werolla Cardigans",
+                        "Dolce Cardigans",
                         style: tertiaryBoldTextStyle,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -106,9 +106,10 @@ class OrderInProcessTile extends StatelessWidget {
                               )),
                               onPressed: () {
                                 showModalBottomSheet(
+                                  constraints: BoxConstraints(maxHeight: SizeConfig.screenHeight*.9,),
                                   isScrollControlled: true,
                                   context: context,
-                                  builder: (context) => LeaveCommentSheet(),
+                                  builder: (context) => const LeaveCommentSheet(),
                                 );
                               },
                               child: const Text(

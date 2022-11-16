@@ -14,7 +14,7 @@ class CheckoutScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kSecondaryColor,
       appBar: buildAppBar(context),
-      body: Body(),
+      body: const Body(),
       bottomNavigationBar: BottomAppBar(
     
       child: Padding(

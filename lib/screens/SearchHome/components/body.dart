@@ -93,7 +93,7 @@ class _BodyState extends State<Body> {
                   return ClipRRect(
                       borderRadius:
                           BorderRadius.circular(getPropScreenWidth(40)),
-                      child: BottomFilterSheet());
+                      child: const BottomFilterSheet());
                 });
           },
           icon: const Icon(

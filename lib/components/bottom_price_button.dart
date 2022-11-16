@@ -34,7 +34,7 @@ class BottomPriceButton extends StatelessWidget {
                   height: 5,
                 ),
                 Text(
-                  "${price} сом",
+                  "$price сом",
                   style: 
                   headerTextStyle,
                 ),

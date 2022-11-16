@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/size_config.dart';
 
-import '../../../components/circle_small_btn.dart';
-import '../../../constants.dart';
 import 'invite_friend_tile.dart';
 
 class Body extends StatelessWidget {

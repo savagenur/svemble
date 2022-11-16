@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/constants.dart';
-import 'package:svemble/screens/Error/components/body.dart';
 
 class ErrorScreen extends StatelessWidget {
   static const routeName = "/error";

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 import '../size_config.dart';
-import '../screens/Cart/components/remove_bottom_sheer.dart';
+import '../screens/Cart/components/remove_bottom_sheet.dart';
 import '../screens/Cart/components/small_remove_and_add_btn.dart';
 
 class CartTile extends StatelessWidget {
@@ -37,7 +37,7 @@ class CartTile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Werolla Cardigans",
+                        "Dolce Cardigans",
                         style: tertiaryBoldTextStyle,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -47,7 +47,7 @@ class CartTile extends StatelessWidget {
                               onTap: () {
                                 buildShowModalBottomSheet(context);
                               },
-                              child: Icon(Icons.delete)),
+                              child: const Icon(Icons.delete)),
                     ],
                   ),
                   SizedBox(
@@ -117,7 +117,7 @@ class CartTile extends StatelessWidget {
         context: context,
         
         builder: (context) {
-          return RemoveBottomSheet();
+          return const RemoveBottomSheet();
         });
   }
 

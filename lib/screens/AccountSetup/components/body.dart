@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/components/default_button.dart';
-import 'package:svemble/constants.dart';
 import 'package:svemble/screens/Main/main_screen.dart';
 import 'package:svemble/size_config.dart';
 

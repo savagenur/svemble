@@ -16,11 +16,11 @@ class Body extends StatelessWidget {
             SizedBox(
               height: getPropScreenWidth(20),
             ),
-            CategoryRowItems(),
+            const CategoryRowItems(),
             SizedBox(
               height: getPropScreenWidth(20),
             ),
-            ProductTileList(),
+            const ProductTileList(),
             SizedBox(height: getPropScreenWidth(50),)
           ],
         ),

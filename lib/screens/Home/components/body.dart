@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
             SizedBox(
               height: getPropScreenWidth(20),
             ),
-             SearchTextField(),
+             const SearchTextField(),
             SizedBox(
               height: getPropScreenWidth(20),
             ),

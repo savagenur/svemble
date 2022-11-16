@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/constants.dart';
-import 'package:svemble/screens/NotificationProfile/components/body.dart';
+import 'package:svemble/screens/HelpCenter/components/body.dart';
 
-
-class NotificationProfileScreen extends StatelessWidget {
-  static const routeName = "/notification-profile";
-  const NotificationProfileScreen({super.key});
+class HelpCenterScreen extends StatelessWidget {
+  static const routeName = "/help-center";
+  const HelpCenterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,20 +13,11 @@ class NotificationProfileScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kSecondaryColor,
         title: Text(
-          "Уведомление",
+          "Служба Поддержки",
           style: headerTextStyle,
         ),
       ),
       body: const Body(),
-      
     );
   }
 }
-
-
-
-
-
-
-
-

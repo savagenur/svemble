@@ -8,7 +8,7 @@ class Body extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Column(
-        children: [],
+        children: const [],
       ),
     );
   }

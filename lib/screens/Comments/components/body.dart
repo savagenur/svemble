@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:svemble/components/category_row_items.dart';
-import 'package:svemble/constants.dart';
-import 'package:svemble/screens/Home/components/product_tile_list.dart';
 import 'package:svemble/screens/SearchHome/components/rating_row_items.dart';
 import 'package:svemble/size_config.dart';
 
@@ -33,7 +30,7 @@ class Body extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                         horizontal: getPropScreenWidth(20),
                         vertical: getPropScreenWidth(10)),
-                    child: CommentTile(),
+                    child: const CommentTile(),
                   ),
                 )
               ],

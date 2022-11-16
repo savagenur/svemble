@@ -6,9 +6,7 @@ import 'package:svemble/size_config.dart';
 import '../../../components/circle_small_btn.dart';
 import '../../../components/text_divider.dart';
 import '../../../constants.dart';
-import '../../Signup/components/create_email_password_field.dart';
 import '../../Signup/components/media_icons.dart';
-import '../login_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});

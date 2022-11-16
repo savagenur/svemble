@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
-import 'body.dart';
 import 'title_and_sum.dart';
 
 class ResultSumContainer extends StatelessWidget {

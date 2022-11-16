@@ -18,7 +18,7 @@ class ShippingAddressScreen extends StatelessWidget {
         backgroundColor: kSecondaryColor,
         title: Text("Адрес доставки",style: headerTextStyle,),
       ),
-      body: Body(),
+      body: const Body(),
       bottomNavigationBar: BottomAppBar(
     
       child: Padding(

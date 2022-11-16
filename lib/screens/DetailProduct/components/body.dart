@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:svemble/components/default_button.dart';
 import 'package:svemble/components/small_text_bg.dart';
-import 'package:svemble/constants.dart';
 import 'package:svemble/screens/Comments/comments_screen.dart';
 import 'package:svemble/size_config.dart';
 
@@ -23,7 +21,7 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            AspectRatio(aspectRatio: 1, child: CarouselWithIndicatorDemo()),
+            const AspectRatio(aspectRatio: 1, child: CarouselWithIndicatorDemo()),
             SizedBox(
               width: double.infinity,
               child: Padding(

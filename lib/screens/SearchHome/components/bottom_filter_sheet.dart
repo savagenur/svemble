@@ -19,7 +19,7 @@ class BottomFilterSheet extends StatefulWidget {
 }
 
 class BottomFilterSheetState extends State<BottomFilterSheet> {
-  SfRangeValues _values = SfRangeValues(5000.0, 20000.0);
+  SfRangeValues _values = const SfRangeValues(5000.0, 20000.0);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class BottomFilterSheetState extends State<BottomFilterSheet> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          LinearOvalStaff(),
+          const LinearOvalStaff(),
           SizedBox(
             height: getPropScreenWidth(15),
           ),
@@ -70,7 +70,7 @@ class BottomFilterSheetState extends State<BottomFilterSheet> {
               SizedBox(
                 height: getPropScreenWidth(20),
               ),
-              SortByRowItems(),
+              const SortByRowItems(),
               SizedBox(
                 height: getPropScreenWidth(20),
               ),
@@ -78,7 +78,7 @@ class BottomFilterSheetState extends State<BottomFilterSheet> {
               SizedBox(
                 height: getPropScreenWidth(20),
               ),
-              RatingRowItems(),
+              const RatingRowItems(),
               SizedBox(
                 height: getPropScreenWidth(20),
               ),

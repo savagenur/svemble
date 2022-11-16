@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:svemble/data/ratings.dart';
 
 import '../../../constants.dart';
-import '../../../data/categories.dart';
 import '../../../size_config.dart';
 
 class RatingRowItems extends StatefulWidget {

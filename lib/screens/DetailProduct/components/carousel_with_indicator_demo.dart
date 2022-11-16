@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +6,8 @@ import '../../../data/products.dart';
 import '../../../size_config.dart';
 
 class CarouselWithIndicatorDemo extends StatefulWidget {
+  const CarouselWithIndicatorDemo({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _CarouselWithIndicatorState();
@@ -86,7 +87,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                child: Icon(Icons.arrow_back_ios)),
+                child: const Icon(Icons.arrow_back_ios)),
           )
         ],
       ),

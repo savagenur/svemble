@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:svemble/auth/Login/login_screen.dart';
 import 'package:svemble/components/circle_small_btn.dart';
-import 'package:svemble/components/default_button.dart';
 import 'package:svemble/components/text_divider.dart';
 import 'package:svemble/constants.dart';
 import 'package:svemble/size_config.dart';

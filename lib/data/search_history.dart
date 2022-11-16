@@ -1,6 +1,5 @@
 import 'package:svemble/data/products.dart';
 
-import '../models/product.dart';
 
 final List<String> allSearchHistory = [
   "обувь",

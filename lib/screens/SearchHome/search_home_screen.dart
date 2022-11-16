@@ -13,7 +13,7 @@ class SearchHomeScreen extends StatelessWidget {
         title: Text("Svemble",style: headerTextStyle,),
         centerTitle: true,
       ),
-      body: Body(),
+      body: const Body(),
     );
   }
 }

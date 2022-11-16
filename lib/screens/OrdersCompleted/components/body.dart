@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: getPropScreenWidth(20),),
-            ...List.generate(3, (index) => OrderInProcessTile(isCompletedScreen: true),)
+            ...List.generate(3, (index) => const OrderInProcessTile(isCompletedScreen: true),)
           ],
         ),
       ),

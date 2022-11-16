@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:svemble/screens/Popular/popular_screen.dart';
 import 'package:svemble/screens/SearchHome/search_home_screen.dart';
 
 import '../../../size_config.dart';

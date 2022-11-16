@@ -12,7 +12,7 @@ class NotificationScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kSecondaryColor,
       appBar: buildAppBar(context),
-      body: Body(),
+      body: const Body(),
     );
   }
 

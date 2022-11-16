@@ -12,6 +12,7 @@ import 'package:svemble/screens/DetailProduct/detail_product_screen.dart';
 import 'package:svemble/screens/EditProfile/edit_profile_screen.dart';
 import 'package:svemble/screens/Error/error_screen.dart';
 import 'package:svemble/screens/Favorite/favorite_screen.dart';
+import 'package:svemble/screens/HelpCenter/help_center_screen.dart';
 import 'package:svemble/screens/Home/home_screen.dart';
 import 'package:svemble/screens/InviteFriends/invite_friends_screen.dart';
 import 'package:svemble/screens/Main/main_screen.dart';
@@ -28,7 +29,7 @@ import 'screens/SearchHome/search_home_screen.dart';
 
 class AppRoute {
   Route onGenerateRoute(RouteSettings routeSettings) {
-    dynamic arguments = routeSettings.arguments;
+    // dynamic arguments = routeSettings.arguments;
     switch (routeSettings.name) {
       case SplashScreen.routeName:
         return PageTransition(
@@ -167,6 +168,12 @@ class AppRoute {
         return PageTransition(
           settings: const RouteSettings(name: InviteFriendsScreen.routeName),
           child: const InviteFriendsScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+      case HelpCenterScreen.routeName:
+        return PageTransition(
+          settings: const RouteSettings(name: HelpCenterScreen.routeName),
+          child: const HelpCenterScreen(),
           type: PageTransitionType.rightToLeft,
         );
       default:

@@ -12,7 +12,7 @@ class InviteFriendsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Пригласить Друзей",style: headerTextStyle,),
       ),
-      body: Body(),
+      body: const Body(),
     );
   }
 }

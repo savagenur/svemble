@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:svemble/components/confirm_and_cancel_btn.dart';
 
-import '../../../components/default_button.dart';
 import '../../../components/linear_oval_staff.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -40,34 +40,10 @@ class RemoveBottomSheet extends StatelessWidget {
           SizedBox(
             height: getPropScreenWidth(15),
           ),
-          SizedBox(
-            width: SizeConfig.screenWidth,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Expanded(
-                  child: DefaultButton(
-                    text: "Отмена",
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    backgroundColor: kSecondaryColor,
-                    textColor: kPrimaryColor,
-                  ),
-                ),
-                SizedBox(
-                  width: getPropScreenWidth(10),
-                ),
-                Expanded(
-                  child: DefaultButton(
-                    text: "Да, Удалить",
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                ),
-              ],
-            ),
+          Flexible(
+            child: ConfirmAndCancelBtn(confirmTitle: "Да, Удалить", onTap: () {
+              
+            },),
           ),
           SizedBox(
             height: getPropScreenWidth(50),

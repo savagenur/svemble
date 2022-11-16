@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:svemble/screens/AccountSetup/account_setup_screen.dart';
-import 'package:svemble/screens/AddressProfile/address_profile_screen.dart';
 
 import '../../../components/check_tile.dart';
 import '../../../components/default_button.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:svemble/components/leave_account_sheet.dart';
 import 'package:svemble/constants.dart';
 import 'package:svemble/data/profile_items.dart';
-import 'package:svemble/screens/EditProfile/edit_profile_screen.dart';
 import 'package:svemble/size_config.dart';
 
 import '../../../components/profile_avatar_with_btn.dart';
@@ -43,7 +43,14 @@ class Body extends StatelessWidget {
           ),
         ),
         ListTile(
-          onTap: () {},
+          onTap: () {
+            showModalBottomSheet(
+                context: context,
+
+                builder: (context) {
+                  return const LeaveAccountSheet();
+                });
+          },
           minLeadingWidth: 0,
           contentPadding:
               EdgeInsets.symmetric(horizontal: getPropScreenWidth(20)),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:svemble/screens/DetailProduct/components/carousel_with_indicator_demo.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -36,7 +35,7 @@ class RemoveAndAdd extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.add),
+            icon: const Icon(Icons.add),
           ),
         ],
       ),

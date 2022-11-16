@@ -15,7 +15,7 @@ class CartScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kSecondaryColor,
       appBar: buildAppBar(context),
-      body: Body(),
+      body: const Body(),
       bottomNavigationBar: BottomPriceButton(
         price: 14300,
         buttonText: "Оплатить",
